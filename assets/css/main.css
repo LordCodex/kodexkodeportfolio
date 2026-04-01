@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #059669;
+  --color-secondary: #1A1A1A;
+  --color-tertiary: #0F0F0F;
+  --color-dark: #0d0d0d;
+  --color-light: #ededed;
+  --color-accent: #065f46;
+  
+  --font-sans: "Outfit", sans-serif;
+}
+
+@layer utilities {
+    .text-balance {
+      text-wrap: balance;
+    }
+  }
+
+html, body {
+  background-color: #0d0d0d;
+  color: #ededed;
+  font-family: 'Outfit', sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #059669;
+  color: white;
+}
