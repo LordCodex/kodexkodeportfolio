@@ -59,19 +59,19 @@ export default defineNuxtConfig({
         { property: 'og:locale', content: 'en_NG' },
         { property: 'og:title', content: 'KodexKodes | Senior Software Engineer in Nigeria' },
         { property: 'og:description', content: 'Building high-performance web and mobile applications with modern technologies in Lagos, Nigeria.' },
-        { property: 'og:image', content: '/images/kodex.jpg' },
+        { property: 'og:image', content: '/images/logo.jpg' },
         // Twitter
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:url', content: 'https://kodexkode.com.ng' },
         { name: 'twitter:title', content: 'KodexKodes | Senior Software Engineer in Nigeria' },
         { name: 'twitter:description', content: 'Building high-performance web and mobile applications with modern technologies in Lagos, Nigeria.' },
-        { name: 'twitter:image', content: '/images/kodex.jpg' }
+        { name: 'twitter:image', content: '/images/logo.jpg' }
       ],
       htmlAttrs: {
         lang: 'en-NG'
       },
       link: [
-        { rel: 'icon', type: 'image/jpeg', href: '/images/kodex.jpg' },
+        { rel: 'icon', type: 'image/jpeg', href: '/images/logo.jpg' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap' }
