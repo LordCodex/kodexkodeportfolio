@@ -30,7 +30,7 @@
 
         <!-- Quick Links -->
         <div class="col-span-1 space-y-4">
-          <h4 class="text-light font-semibold uppercase tracking-wider text-xs">Explore</h4>
+          <h3 class="text-light font-semibold uppercase tracking-wider text-xs">Explore</h3>
           <ul class="space-y-2">
             <li><NuxtLink to="/" class="text-light/60 hover:text-primary text-sm transition-colors relative group inline-block">Home<span class="absolute -bottom-1 left-0 w-0 h-[1px] bg-primary transition-all duration-300 group-hover:w-full"></span></NuxtLink></li>
             <li><NuxtLink to="/about" class="text-light/60 hover:text-primary text-sm transition-colors relative group inline-block">About<span class="absolute -bottom-1 left-0 w-0 h-[1px] bg-primary transition-all duration-300 group-hover:w-full"></span></NuxtLink></li>
@@ -41,7 +41,7 @@
 
         <!-- Contact Info -->
         <div class="col-span-1 space-y-4">
-          <h4 class="text-light font-semibold uppercase tracking-wider text-xs">Say Hello</h4>
+          <h3 class="text-light font-semibold uppercase tracking-wider text-xs">Say Hello</h3>
            <ul class="space-y-3">
             <li>
                <a :href="`mailto:${settings.email}`" class="text-light/60 hover:text-primary text-sm transition-colors flex items-center space-x-2 group">
@@ -59,7 +59,7 @@
         </div>
       </div>
 
-      <div class="mt-16 pt-8 border-t border-light/5 flex flex-col items-center justify-between text-xs text-light/40 space-y-4 md:flex-row md:space-y-0">
+      <div class="mt-16 pt-8 border-t border-light/5 flex flex-col items-center justify-between text-xs text-light/60 space-y-4 md:flex-row md:space-y-0">
         <p>&copy; {{ new Date().getFullYear() }} KodexKodes. All rights reserved.</p>
         <p class="flex items-center space-x-1">
           <span>Designed with</span>

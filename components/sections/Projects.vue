@@ -35,7 +35,7 @@
           <div class="p-6 flex-grow flex flex-col">
             <div class="flex items-center justify-between mb-3">
               <h3 class="text-xl font-bold text-light group-hover:text-primary transition-colors">{{ project.title }}</h3>
-              <a v-if="project.url" :href="project.url" target="_blank" rel="noopener noreferrer" class="text-light/40 hover:text-primary transition-colors">
+              <a v-if="project.url" :href="project.url" target="_blank" rel="noopener noreferrer" class="text-light/40 hover:text-primary transition-colors" :aria-label="'View ' + project.title + ' website'">
                 <iconify-icon icon="lucide:arrow-up-right" class="text-xl" />
               </a>
             </div>

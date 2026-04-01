@@ -22,7 +22,7 @@
         </p>
         
         <div class="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 relative z-20">
-          <a :href="`mailto:${settings.email}`" class="group px-8 py-4 bg-primary text-white font-medium rounded-full flex items-center space-x-3 w-full sm:w-auto justify-center transition-all duration-300 shadow-[0_10px_30px_-10px_rgba(5,150,105,0.5)] hover:shadow-[0_20px_40px_-10px_rgba(5,150,105,0.7)] hover:-translate-y-1">
+          <a :href="`mailto:${settings.email}`" class="group px-8 py-4 bg-primary text-white font-medium rounded-full flex items-center space-x-3 w-full sm:w-auto justify-center transition-all duration-300 shadow-[0_10px_30px_-10px_rgba(5,150,105,0.5)] hover:shadow-[0_20px_40px_-10px_rgba(5,150,105,0.7)] hover:-translate-y-1" aria-label="Send me an email">
             <span>Send me an email</span>
              <iconify-icon icon="lucide:send" class="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
           </a>

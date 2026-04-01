@@ -19,7 +19,7 @@
       </nav>
 
       <!-- Mobile Menu Button -->
-      <button @click="isMobileMenuOpen = !isMobileMenuOpen" class="md:hidden text-light hover:text-primary transition-colors focus:outline-none">
+      <button @click="isMobileMenuOpen = !isMobileMenuOpen" class="md:hidden text-light hover:text-primary transition-colors focus:outline-none" aria-label="Toggle Navigation Menu">
         <iconify-icon v-if="!isMobileMenuOpen" icon="lucide:menu" class="text-2xl"></iconify-icon>
         <iconify-icon v-else icon="lucide:x" class="text-2xl"></iconify-icon>
       </button>
