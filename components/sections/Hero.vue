@@ -21,7 +21,7 @@
     <div class="container mx-auto px-6 relative z-10">
       <div class="max-w-5xl mx-auto flex flex-col items-center md:items-start text-center md:text-left">
         <!-- Badge -->
-        <div ref="badge" class="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-light/5 border border-light/10 mb-8 backdrop-blur-sm opacity-0 translate-y-4">
+        <div ref="badge" class="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-light/5 border border-light/10 mb-8 backdrop-blur-sm">
           <span class="relative flex h-3 w-3">
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
             <span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
@@ -31,19 +31,19 @@
 
         <!-- Main Heading -->
         <h1 class="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[1.1] text-balance mb-6 uppercase">
-          <span class="block overflow-hidden"><span ref="title1" class="block translate-y-full">Building</span></span>
-          <span class="block overflow-hidden"><span ref="title2" class="block translate-y-full text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Amazing &</span></span>
-          <span class="block overflow-hidden"><span ref="title3" class="block translate-y-full">Meaningful</span></span>
-          <span class="block overflow-hidden"><span ref="title4" class="block translate-y-full">Digital <span class="text-light/50 italic font-serif lowercase">Experiences</span></span></span>
+          <span class="block overflow-hidden"><span ref="title1" class="block">Building</span></span>
+          <span class="block overflow-hidden"><span ref="title2" class="block text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Amazing &</span></span>
+          <span class="block overflow-hidden"><span ref="title3" class="block">Meaningful</span></span>
+          <span class="block overflow-hidden"><span ref="title4" class="block">Digital <span class="text-light/50 italic font-serif lowercase">Experiences</span></span></span>
         </h1>
 
         <!-- Subheading -->
-        <p ref="subtitle" class="text-lg md:text-xl text-light/80 max-w-2xl font-light leading-relaxed mb-10 opacity-0 translate-y-4">
+        <p ref="subtitle" class="text-lg md:text-xl text-light/80 max-w-2xl font-light leading-relaxed mb-10">
           I'm a software engineer who loves building clean web apps, solid backends, and genuinely great mobile experiences.
         </p>
 
         <!-- CTA Buttons -->
-        <div ref="ctas" class="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 opacity-0 translate-y-4">
+        <div ref="ctas" class="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">
           <NuxtLink to="/projects" class="group relative px-6 py-4 bg-primary text-white font-medium rounded-full overflow-hidden w-full sm:w-auto text-center text-sm md:text-base">
             <span class="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-black"></span>
             <span class="relative flex items-center justify-center space-x-2">
@@ -85,14 +85,12 @@ const blob3 = ref(null);
 onMounted(() => {
   const tl = gsap.timeline({ defaults: { ease: 'power4.out' } });
 
-  tl.to(badge.value, { opacity: 1, y: 0, duration: 0.8, delay: 0.2 })
-    .to([title1.value, title2.value, title3.value, title4.value], { 
-      y: 0, 
-      duration: 1.2, 
-      stagger: 0.15 
-    }, "-=0.6")
-    .to(subtitle.value, { opacity: 1, y: 0, duration: 0.8 }, "-=0.8")
-    .to(ctas.value, { opacity: 1, y: 0, duration: 0.8 }, "-=0.6");
+  tl.fromTo(badge.value, { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.8, delay: 0.2 })
+    .fromTo([title1.value, title2.value, title3.value, title4.value], 
+      { y: '100%' },
+      { y: 0, duration: 1.2, stagger: 0.15 }, "-=0.6")
+    .fromTo(subtitle.value, { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.8 }, "-=0.8")
+    .fromTo(ctas.value, { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.8 }, "-=0.6");
 
   // Subtle blob animation
   gsap.to(blob1.value, {

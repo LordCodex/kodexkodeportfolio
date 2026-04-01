@@ -72,12 +72,14 @@ export default defineNuxtConfig({
       },
       link: [
         { rel: 'icon', type: 'image/jpeg', href: '/images/logo.jpg' },
+        { rel: 'preconnect', href: 'https://cbfcnqviujmhlgzjfkxj.supabase.co' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
-        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap' }
+        { rel: 'preload', as: 'style', href: 'https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap' },
+        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap', media: 'print', onload: "this.media='all'" }
       ],
       script: [
-        { src: 'https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js', tagPosition: 'bodyClose' }
+        { src: 'https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js', tagPosition: 'bodyClose', defer: true, async: true }
       ]
     }
   },
