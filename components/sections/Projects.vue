@@ -24,7 +24,7 @@
             <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500"></div>
             <!-- Overlay Content on Hover -->
             <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm bg-dark/40">
-              <a v-if="project.url" :href="project.url" target="_blank" rel="noopener noreferrer" class="px-6 py-2 bg-primary text-white rounded-full font-medium flex items-center space-x-2 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+              <a v-if="project.url" :href="project.url" target="_blank" rel="noopener noreferrer" class="px-6 py-2 bg-primary text-white rounded-full font-medium flex items-center space-x-2 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300" :aria-label="'Visit ' + project.title + ' website'">
                 <span>Visit Site</span>
                 <iconify-icon icon="lucide:external-link" class="text-sm border border-transparent"/>
               </a>
@@ -35,7 +35,7 @@
           <div class="p-6 flex-grow flex flex-col">
             <div class="flex items-center justify-between mb-3">
               <h3 class="text-xl font-bold text-light group-hover:text-primary transition-colors">{{ project.title }}</h3>
-              <a v-if="project.url" :href="project.url" target="_blank" rel="noopener noreferrer" class="text-light/40 hover:text-primary transition-colors" :aria-label="'View ' + project.title + ' website'">
+              <a v-if="project.url" :href="project.url" target="_blank" rel="noopener noreferrer" class="text-light/60 hover:text-primary transition-colors" :aria-label="'View ' + project.title + ' website'">
                 <iconify-icon icon="lucide:arrow-up-right" class="text-xl" />
               </a>
             </div>
