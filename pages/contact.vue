@@ -42,7 +42,10 @@
               </div>
               <div>
                 <h4 class="text-light font-bold mb-1">Socials</h4>
-                 <div class="flex space-x-4 mt-2">
+                  <div class="flex space-x-4 mt-2">
+                    <a :href="settings.github_url || 'https://github.com/LordCodex'" target="_blank" rel="noopener noreferrer" class="text-light/60 hover:text-primary transition-colors text-xl">
+                      <iconify-icon icon="lucide:github" />
+                    </a>
                     <a :href="settings.twitter_url || 'https://twitter.com/lanre_olat'" target="_blank" rel="noopener noreferrer" class="text-light/60 hover:text-primary transition-colors text-xl">
                       <iconify-icon icon="lucide:twitter" />
                     </a>
