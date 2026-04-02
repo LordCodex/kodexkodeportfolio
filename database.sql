@@ -13,6 +13,7 @@ CREATE TABLE projects (
     url VARCHAR(255),
     external_url VARCHAR(255),
     cta_text VARCHAR(100) DEFAULT 'View Live',
+    image_url TEXT,
     sort_order INTEGER DEFAULT 0,
     is_enabled BOOLEAN DEFAULT true,
     created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL

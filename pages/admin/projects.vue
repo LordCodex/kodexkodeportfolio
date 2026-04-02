@@ -26,8 +26,9 @@
         class="bg-dark/50 border border-light/10 p-6 flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-6 rounded-2xl group hover:border-primary/40 transition-colors"
       >
         <!-- Thumbnail -->
-        <div class="w-full md:w-32 h-20 rounded-lg overflow-hidden bg-gradient-to-br flex items-center justify-center shadow-inner" :class="project.gradient">
-           <iconify-icon icon="lucide:folder-git-2" class="text-white/30 text-2xl"></iconify-icon>
+        <div class="w-full md:w-32 h-20 rounded-lg overflow-hidden flex items-center justify-center shadow-inner" :class="!project.image_url ? ['bg-gradient-to-br', project.gradient] : 'bg-[#1a1a1a]'">
+           <img v-if="project.image_url" :src="project.image_url" class="w-full h-full object-cover" />
+           <iconify-icon v-else icon="lucide:folder-git-2" class="text-white/30 text-2xl"></iconify-icon>
         </div>
         
         <!-- Info -->
@@ -105,9 +106,18 @@
             </div>
           </div>
 
-          <div class="space-y-2">
-            <label class="text-sm text-light/70 ml-2">Description</label>
-            <textarea v-model="form.description" required rows="3" class="w-full px-4 py-3 bg-dark/50 border border-light/10 rounded-xl text-light outline-none focus:border-primary transition-colors scrollbar-thin" placeholder="Describe the project..."></textarea>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="space-y-2">
+              <label class="text-sm text-light/70 ml-2">Description</label>
+              <textarea v-model="form.description" required rows="3" class="w-full px-4 py-3 bg-dark/50 border border-light/10 rounded-xl text-light outline-none focus:border-primary transition-colors scrollbar-thin" placeholder="Describe the project..."></textarea>
+            </div>
+            <div class="space-y-2">
+              <label class="text-sm text-light/70 ml-2">Image URL (Optional)</label>
+              <input v-model="form.image_url" type="text" class="w-full px-4 py-3 bg-dark/50 border border-light/10 rounded-xl text-light outline-none focus:border-primary transition-colors" placeholder="https://image-url.com/img.jpg" />
+               <div v-if="form.image_url" class="h-14 mt-2 rounded-lg overflow-hidden border border-light/10">
+                 <img :src="form.image_url" class="w-full h-full object-cover" />
+               </div>
+            </div>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -161,6 +171,7 @@ const form = ref({
   description: '',
   url: '',
   gradient: 'from-gray-800 to-gray-900',
+  image_url: '',
   tags: []
 })
 const formTagsInput = ref('')
@@ -191,7 +202,7 @@ const editProject = (proj) => {
 const closeModal = () => {
   showProjectModal.value = false
   editingProject.value = null
-  form.value = { id: null, title: '', description: '', url: '', gradient: 'from-gray-800 to-gray-900', tags: [] }
+  form.value = { id: null, title: '', description: '', url: '', gradient: 'from-gray-800 to-gray-900', image_url: '', tags: [] }
   formTagsInput.value = ''
 }
 
@@ -208,6 +219,7 @@ const saveProject = async () => {
       description: form.value.description,
       url: form.value.url,
       gradient: form.value.gradient,
+      image_url: form.value.image_url,
       tags: tagsArray
     }
     

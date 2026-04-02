@@ -19,9 +19,16 @@
           :key="index"
           class="project-card group relative bg-secondary/30 rounded-2xl overflow-hidden border border-light/5 hover:border-primary/30 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-20px_rgba(5,150,105,0.3)] flex flex-col h-full"
         >
-          <!-- Project Image Placeholder (Gradient/Patterns since no images provided) -->
-          <div class="relative w-full h-56 overflow-hidden bg-gradient-to-br" :class="project.gradient">
-            <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500"></div>
+          <!-- Project Image (Image or Gradient Fallback) -->
+          <div class="relative w-full h-56 overflow-hidden" :class="!project.image_url ? ['bg-gradient-to-br', project.gradient] : 'bg-secondary/30'">
+            <img 
+              v-if="project.image_url" 
+              :src="project.image_url" 
+              :alt="project.title" 
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            />
+            <div v-if="!project.image_url" class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500"></div>
+            
             <!-- Overlay Content on Hover -->
             <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm bg-dark/40">
               <a v-if="project.url" :href="project.url" target="_blank" rel="noopener noreferrer" class="px-6 py-2 bg-primary text-white rounded-full font-medium flex items-center space-x-2 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300" :aria-label="'Visit ' + project.title + ' website'">
