@@ -13,6 +13,10 @@
         <NuxtLink v-for="link in links" :key="link.name" :to="link.path" class="text-sm font-medium text-light/70 hover:text-primary transition-colors hover:animate-pulse">
           {{ link.name }}
         </NuxtLink>
+        <div class="h-4 w-[1px] bg-light/10 mx-2"></div>
+        <a href="https://github.com/LordCodex" target="_blank" rel="noopener noreferrer" class="text-light/50 hover:text-primary transition-colors text-xl flex" aria-label="GitHub">
+          <iconify-icon icon="lucide:github" />
+        </a>
         <NuxtLink to="/contact" class="px-6 py-2 bg-primary/10 text-primary border border-primary hover:bg-primary hover:text-white transition-all duration-300 rounded-full text-sm font-medium shadow-[0_0_15px_rgba(5,150,105,0.3)] hover:shadow-[0_0_25px_rgba(5,150,105,0.6)]">
           Let's Talk
         </NuxtLink>

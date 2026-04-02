@@ -74,7 +74,8 @@ INSERT INTO settings (key, value, description) VALUES
 ('twitter_url', 'https://twitter.com/lanre_olat', 'Twitter Profile Link'),
 ('linkedin_url', 'https://www.linkedin.com/in/lanreolat', 'LinkedIn Profile Link'),
 ('instagram_url', 'https://www.instagram.com/lanre_olat/', 'Instagram Profile Link'),
-('facebook_url', 'https://web.facebook.com/michaeloreoluwa5', 'Facebook Profile Link');
+('facebook_url', 'https://web.facebook.com/michaeloreoluwa5', 'Facebook Profile Link'),
+('github_url', 'https://github.com/LordCodex', 'GitHub Profile Link');
 
 -- Insert Initial Skills
 INSERT INTO skills (name, icon, sort_order) VALUES

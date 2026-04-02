@@ -13,6 +13,9 @@
             Crafting digital experiences with purpose. Specializing in modern web applications, interactive designs, and meaningful code.
           </p>
           <div class="flex space-x-4 pt-2">
+            <a :href="settings.github_url || 'https://github.com/LordCodex'" target="_blank" rel="noopener noreferrer" class="text-light/50 hover:text-primary transition-colors text-xl" aria-label="GitHub">
+              <iconify-icon icon="lucide:github" />
+            </a>
             <a :href="settings.twitter_url || 'https://twitter.com/lanre_olat'" target="_blank" rel="noopener noreferrer" class="text-light/50 hover:text-primary transition-colors text-xl" aria-label="Twitter">
               <iconify-icon icon="lucide:twitter" />
             </a>

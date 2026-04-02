@@ -36,35 +36,33 @@
           </div>
         </div>
 
-        <!-- Visual / Graphic Content -->
+        <!-- Visual Content (Real Photo) -->
         <div class="relative order-1 lg:order-2 flex justify-center lg:justify-end">
-           <div class="relative w-full max-w-md aspect-[4/5] rounded-3xl overflow-hidden group">
-              <!-- Decorative abstract background instead of an image -->
-              <div class="absolute inset-0 bg-gradient-to-br from-primary/30 to-secondary/80 mix-blend-multiply z-10 group-hover:opacity-50 transition-opacity duration-700"></div>
-              
+           <div class="relative w-full max-w-sm aspect-[4/5] rounded-3xl overflow-hidden group border border-light/10 shadow-2xl">
+              <!-- Animated Background behind image -->
               <div class="absolute inset-0 bg-dark z-0">
-                <!-- Inner animated blobs for visual interest -->
-                 <div class="absolute top-10 right-10 w-40 h-40 bg-primary/40 rounded-full mix-blend-screen filter blur-[40px] animate-blob"></div>
-                 <div class="absolute bottom-10 left-10 w-60 h-60 bg-accent/40 rounded-full mix-blend-screen filter blur-[60px] animate-blob animation-delay-2000"></div>
-                 
-                 <!-- Tech Pattern overlay -->
-                 <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_white_1px,_transparent_1px)] bg-[size:20px_20px]"></div>
+                <div class="absolute top-10 right-10 w-40 h-40 bg-primary/20 rounded-full mix-blend-screen filter blur-[40px] animate-blob"></div>
+                <div class="absolute bottom-10 left-10 w-60 h-60 bg-accent/20 rounded-full mix-blend-screen filter blur-[60px] animate-blob animation-delay-2000"></div>
               </div>
 
-               <div class="absolute inset-0 z-20 flex flex-col items-center justify-center p-8 text-center border border-light/10 rounded-3xl backdrop-blur-sm group-hover:backdrop-blur-none transition-all duration-700">
-                  <div class="w-24 h-24 rounded-full border-2 border-primary/50 mb-6 flex items-center justify-center bg-dark/50 overflow-hidden relative">
-                    <iconify-icon icon="lucide:code-2" class="text-4xl text-primary animate-pulse" />
-                     <!-- A spinning border effect -->
-                    <div class="absolute inset-0 border-t-2 border-primary rounded-full animate-spin"></div>
-                  </div>
-                  <h3 class="text-2xl font-bold text-light mb-2 group-hover:text-primary transition-colors">KodexKodes</h3>
-                  <p class="text-light/60 text-sm font-light uppercase tracking-widest">Creative Engineer</p>
-               </div>
+              <!-- Real Photo -->
+              <img src="/images/me.png" alt="Profile" class="absolute inset-0 w-full h-full object-cover z-10 transition-transform duration-700 group-hover:scale-110" />
+              
+              <!-- Gradient Overlay -->
+              <div class="absolute inset-0 bg-gradient-to-t from-dark/80 via-transparent to-transparent z-20 transition-opacity duration-700 group-hover:opacity-40"></div>
+
+              <!-- Floating Info Badge on Image -->
+              <div class="absolute bottom-6 left-6 right-6 z-30 transform transition-transform duration-700 group-hover:-translate-y-2">
+                 <div class="p-6 rounded-2xl bg-dark/40 backdrop-blur-md border border-light/10 text-left">
+                    <h3 class="text-xl font-bold text-light mb-1">Olaitan Michael Olanrewaju</h3>
+                    <p class="text-primary text-xs font-bold uppercase tracking-widest leading-none">Full Stack Engineer</p>
+                 </div>
+              </div>
            </div>
 
            <!-- Floating decorative elements -->
-           <div class="absolute top-1/4 -left-12 lg:-left-24 w-24 h-24 bg-primary/10 rounded-full mix-blend-screen filter blur-xl animate-float"></div>
-           <div class="absolute bottom-1/4 -right-8 w-16 h-16 bg-accent/20 border border-primary/20 rounded-full filter blur-sm animate-float animation-delay-4000"></div>
+           <div class="absolute -top-6 -left-6 lg:-left-12 w-24 h-24 bg-primary/10 rounded-full mix-blend-screen filter blur-xl animate-float"></div>
+           <div class="absolute -bottom-6 -right-6 lg:-right-12 w-20 h-20 bg-accent/20 rounded-full mix-blend-screen filter blur-xl animate-float animation-delay-2000"></div>
         </div>
       </div>
     </div>

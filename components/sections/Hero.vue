@@ -54,6 +54,10 @@
            <NuxtLink to="/contact" class="group relative px-6 py-4 bg-transparent border border-light/20 text-light hover:border-primary/50 hover:bg-primary/5 font-medium rounded-full transition-all duration-300 w-full sm:w-auto text-center backdrop-blur-sm text-sm md:text-base">
             <span>Get in Touch</span>
           </NuxtLink>
+           <a href="https://github.com/LordCodex" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-2 text-light/50 hover:text-primary transition-colors pl-4 border-l border-light/10" aria-label="GitHub">
+            <iconify-icon icon="lucide:github" class="text-2xl" />
+            <span class="text-sm font-medium">GitHub</span>
+          </a>
         </div>
 
         <!-- Scroll Indicator -->
